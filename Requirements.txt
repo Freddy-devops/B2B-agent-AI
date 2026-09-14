@@ -1,0 +1,5 @@
+crewai
+litellm
+google-generativeai
+python-dotenv
+nest_asyncio
