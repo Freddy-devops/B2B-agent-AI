@@ -1,26 +1,27 @@
-# Autonomous B2B Support & Lead Qualification AI Suite
+# Autonomous B2B Support & Regional Compliance AI Suite (Code Caméléon)
 
-Une suite multi-agents IA conçue avec CrewAI pour automatiser le tri, la qualification de leads B2B et la génération de réponses support personnalisées en temps réel.
+An enterprise-grade multi-agent B2B solution built with CrewAI for technical support automation, lead qualification, and dynamic international legal compliance (EU AI Act, GDPR, CCPA).
 
-## 🚀 Fonctionnalités
+## 🚀 Key Features
 
-* **Qualification Automatique (Agent Analyste)** : Analyse des messages entrants, extraction des métadonnées (Nom, Email), catégorisation de la demande (Devis, Support, Spam) et évaluation du niveau d'urgence.
-* **Recherche Contextuelle (Agent Chercheur)** : Interrogation de la base de données interne ou de la documentation technique via un outil dédié (`@tool`) pour identifier la procédure exacte.
-* **Rédaction Professionnelle (Agent Rédacteur)** : Traduction des procédures internes en e-mails rassurants et structurés, rédigés en anglais professionnel.
-* **Architecture Serverless Ready** : Code asynchrone (`kickoff_async`), optimisé pour un déploiement Cloud (AWS Lambda, Render, Google Cloud Functions).
+* **🛡️ Prompt Injection Firewall**: Input stream isolation using strict boundary tagging (`<message_client>`) to neutralize prompt injection attacks.
+* **🌍 "Code Caméléon" Architecture**: Automatic geographic origin detection (ISO Country Code) and dynamic injection of mandatory legal disclaimers based on jurisdiction (EU AI Act for Europe, CAN-SPAM opt-out for the US).
+* **🔑 Multi-Tenant Isolation & GDPR Kill Switch**: Isolated client data management paired with a targeted purge tool (Right to be Forgotten), enabling instant deletion of a specific client's data without affecting other entities.
+* **⚡ Production-Ready & Async**: Optimized asynchronous execution pipeline (`kickoff_async`) built for serverless Cloud deployment (AWS Lambda, Render, GCP).
 
-## 🛠️ Stack Technique
+## 🛠️ Tech Stack
 
-* **Framework Multi-Agents** : [CrewAI](https://github.com/joaomdmoura/crewai)
-* **LLM Engine** : Gemini 3.5 Flash-lite (via `litellm`)
-* **Langage** : Python 3.10+
-* **Gestion des Environnements** : `python-dotenv` & `nest_asyncio`
+* **Multi-Agent Framework**: [CrewAI](https://github.com/joaomdmoura/crewai)
+* **LLM Engine**: Gemini 3.5 Flash-lite (via `litellm`)
+* **Language**: Python 3.10+
+* **Environment Management**: `python-dotenv`, `nest_asyncio`
 
-## 📂 Structure du Projet
+## 📂 Repository Structure
 
 ```text
 b2b-support-agent/
-├── .gitignore          # Exclusion des secrets et fichiers temporaires
-├── requirements.txt    # Dépendances du projet
-├── README.md           # Documentation du dépôt
-└── main.py             # Script principal d'exécution des agents
+├── .gitignore          # Files excluded from Git tracking (.env, caches)
+├── requirements.txt    # Project dependencies
+├── README.md           # Main project documentation
+├── SECURITY.md         # Security policy and compliance standards
+└── main.py             # Source code for agents and workflows
